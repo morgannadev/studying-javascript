@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM - getElementById</title>
+
+    <!-- É possível utilizar javascript aqui com a tag script -->
+    <!-- Neste caso só é bom utilizar quando é necessário carregar um script antes da página -->
+</head>
+
+<body>
+
+    <div id="time-pequeno">Corinthians</div>
+    <div id="time-grande">Santos</div>
+
+    <!-- Nestes exemplos, utilizaremos o javascript com a tag script dentro do html, mas o ideal é ter um arquivo externo ao html -->
+    <script>
+
+        // desta forma aparece a div com a tag
+        console.log(document.getElementById("time-pequeno"));
+
+        // desta forma aparece apenas o conteúdo da div
+        console.log(document.getElementById("time-grande").innerHTML);
+    </script>
+
+    <!-- É possível utilizar javascript aqui com a tag script (final do body) -->
+    <!-- É possível utilizar javascript aqui com a tag script (final do body) chamando um arquivo externo com o atributo src -->
+    <!-- Nestes dois casos o script é executado apenas depois que a página é carregada - mais performático, não atrapalha o carregamento da página -->
+</body>
+</html>
