@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM - variáveis</title>
+</head>
+<body>
+
+
+    <script>
+
+        // esta é uma variável global
+        var nome = "Morganna";
+        
+        function teste() {
+            nome = "Fulana";
+            
+            // esta é uma variável de escopo
+            var outroNome = "Ciclana";
+            console.log("variável dentro da execução da função: outroNome da " + outroNome); // esta linha funciona, pois está dentro da função
+
+            idade = 29; // ao declarar a variável sem o "var", o javascript entende que é uma variável global, mesmo dentro de um escopo (função)
+        }
+
+        console.log("variável sem a execução da função: nome da " + nome);
+        
+        teste();
+        console.log("variável após a execução da função: nome da " + nome);
+        // console.log("variável do escopo da função: outroNome da " + outroNome); // esta linha não funciona, pois está fora da função
+
+        console.log("variável declarada dentro do escopo sem 'var': idade " + idade);
+
+        function outroTeste() {
+            let cidade = "São Paulo"; // ecma script 2015 (es6) - let quer dizer que é local
+        }
+
+        outroTeste();
+        // console.log(cidade); // esta linha não funciona, pois devido ao "let" é uma variável local e está dentro de um escopo
+        // obs: muitos usam "let" quando vai executar um "for"
+
+        const estado = "SP"; // constante - não se deseja alterar o valor da variável
+        // estado = "MG"; // o console.log não funcionará, pois não se pode alterar o valor de uma constante
+        console.log(estado);
+    </script>
+
+</body>
+</html>
