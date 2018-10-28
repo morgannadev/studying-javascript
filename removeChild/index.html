@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM - appendChild</title>
+</head>
+
+<body>
+
+    <!-- removeChild serve para remover um elemento de dentro do outro elemento -->
+
+    <div id="nissan">
+
+    </div>
+
+    <script>
+        
+        var versa = document.createElement("p");
+        versa.innerHTML = "versa";
+
+        var sendra = document.createElement("p");
+        sendra.innerHTML = "sendra";
+
+        document.getElementById("nissan").appendChild(versa);
+        document.getElementById("nissan").appendChild(sendra);
+
+        // para remover
+        document.getElementById("nissan").removeChild(versa);
+
+    </script>
+</body>
+</html>
