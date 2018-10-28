@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM - querySelectorAll</title>
+</head>
+
+<body>
+
+    <div class="teste">1</div>
+    <div class="teste">2</div>
+    <div class="teste">3</div>
+
+    <div id="pai">
+        <div class="filho">1</div>
+        <div class="filho">2</div>
+        <div class="filho">3</div>
+    </div>
+
+    <div id="mae">
+            <div class="filho">a</div>
+            <div class="filho">b</div>
+            <div class="filho">c</div>
+        </div>
+
+    <p>oi</p>
+    <p>olá</p>
+
+    <script>
+
+        // retorna todos os elementos que sejam da classe teste
+        console.log(document.querySelectorAll(".teste"));
+
+        // retorna os elementos que sejam da classe filho dentro do elemento que tenha como id pai
+        console.log(document.getElementById("pai").querySelectorAll(".filho"));
+
+        // funciona como se fosse um "find"
+        console.log(document.getElementById("pai").querySelectorAll(".filho")[0].innerHTML);
+
+    </script>
+</body>
+</html>
