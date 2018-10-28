@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM - createElement</title>
+</head>
+
+<body>
+
+    <script>
+
+        // é possível criar elementos colocando os nomes das tags, como div, p, entre outros
+        console.log(document.createElement("div"));
+
+        var img = document.createElement("img");
+        img.src="http://lorempixel.com/400/200"; // lorempixel - criador de imagem dinâmico
+
+        var p = document.createElement("p");
+        p.innerHTML = "hello, world";
+
+        console.log(img, p);
+
+    </script>
+</body>
+</html>
