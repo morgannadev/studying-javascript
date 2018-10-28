@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM - appendChild</title>
+</head>
+
+<body>
+
+    <!-- appendChild serve para inserir um elemento dentro do outro -->
+
+    <div id="nissan">
+
+    </div>
+
+    <script>
+
+        // criamos o elemento que vamos inserir dentro de outro
+        var versa = document.createElement("p");
+        versa.innerHTML = "versa";
+
+        var sendra = document.createElement("p");
+        sendra.innerHTML = "sendra";
+
+        // recuperamos o item pelo id e inserimos o elemento criado utilizando appendChild (inspecione a página para visualizar)
+        document.getElementById("nissan").appendChild(versa);
+        document.getElementById("nissan").appendChild(sendra);
+
+    </script>
+</body>
+</html>
