@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Eventos - hover</title>
+
+    <!-- a tag e o atributo style estão sendo utilizados aqui apenas para exemplificação, o ideal é ter .css separado -->
+    <style>
+        /* tbody >tr:hover {
+            background-color: #ccc;
+        } */
+        .link {
+            color: red;
+        }
+        .tractive {
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    
+    <a href="#" id="link">
+        <h1>Olá, humanos. Tudo bem?</h1>
+    </a>
+
+    <table style="width: 100%;" >
+        <thead>
+            <th align="left">Nome</th>
+            <th align="left">Idade</th>
+        </thead>
+        <tbody>
+            <tr class="tr">
+                <td style="height: 30px;">Alien</td>
+                <td style="height: 30px;">2000</td>
+            </tr>
+            <tr class="tr">
+                <td style="height: 30px;">Bicho papão</td>
+                <td style="height: 30px;">1000</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+        
+        var link = document.getElementById("link");
+        var trs = document.getElementsByClassName("tr");
+
+        // jQuery: hover - javaScript: mouseover
+        link.addEventListener("mouseover", function() {
+            // para adicionar a classe link do css (style), primeiro acessamos a classList
+            link.classList.add("link");
+        });
+
+        link.addEventListener("mouseleave", function() {
+            // para adicionar a classe link do css (style), primeiro acessamos a classList
+            link.classList.remove("link");
+        });
+
+        for(let i = 0; i < trs.length; i++) {
+            trs[i].addEventListener("mouseover", function() {
+                // o this é referência do elemento de escopo atual, neste caso, o elemento tr
+                // console.log(this); 
+                this.classList.add("tractive");
+            });
+
+            trs[i].addEventListener("mouseleave", function() { 
+                this.classList.remove("tractive");
+            });
+        };
+
+    </script>
+
+</body>
+</html>
