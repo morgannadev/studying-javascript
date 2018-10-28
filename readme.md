@@ -5,4 +5,5 @@
 - Existem comentários para facilitar o entendimento.
 
 ## Documentação para referência:
-- document: [mozilla.org](https://developer.mozilla.org/pt-BR/docs/Web/API/Document)
+- [api document](https://developer.mozilla.org/pt-BR/docs/Web/API/Document);
+- [javascript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript).
