@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM - getElementsByClassName</title>
+</head>
+
+<body>
+
+    <div class="urso">Urso - ruuu - classe 1</div>
+    <div class="urso">Urso - ruuu - classe 2</div>
+    <div class="shrek">Shrek - faz o urruuu</div>
+
+    <script>
+
+        // estamos retornando todas as classes em array - Collection
+        console.log(document.getElementsByClassName("urso"));
+
+        // estamos retornando uma das posições do array
+        console.log(document.getElementsByClassName("urso")[0]);
+    </script>
+</body>
+</html>
