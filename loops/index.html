@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Loops</title>
+</head>
+<body>
+
+    <div class="js">react</div>
+    <div class="js">angular</div>
+    <div class="js">typescript</div>
+    <div class="js">es6</div>
+
+    <script>
+        
+        var js = document.getElementsByClassName('js');
+
+        for(let i = 0; i < js.length; i++) {
+            let texto = js[i].innerHTML;
+            js[i].innerHTML = 'curso ' + texto + ' js';
+            console.log(js[i].innerHTML);
+        }
+
+        var array = [1, 2, 'b', 4];
+
+        console.log(js); // __proto__: HTMLCollection
+        console.log(array); // __proto__: Array(0)
+
+        // atenção na sequência dos parâmetros da função para o foreach de um array
+        // array.forEach(function (element, index) {
+        //     if (element == 1) {
+        //         array[index] = 'vira outra coisa';
+        //     }
+
+        //     console.log(element, index);
+        // });
+
+        // console.log(array);
+
+        // abaixo só funciona se o foreach acima estiver comentado
+        var novaArray = array.map(function (element, index) {
+            if(element === 1) {
+                element = 'outra coisa hein';
+            }
+
+            return element;
+        });
+
+        console.log("array anterior: " + array); // não altera o mesmo, o map cria um novo
+        console.log("novo array alterado: " + novaArray); // verificar no console do navegador
+
+        // obs: map e foreach só funcionam quando o prototype é Array
+
+        var i = 0; // para controle do while
+        while(i < 5) {
+            console.log('hello world');
+            i++;
+        }
+
+    </script>
+
+</body>
+</html>
