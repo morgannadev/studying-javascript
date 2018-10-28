@@ -9,7 +9,26 @@
 
     <!-- parentNode serve para acessar um elemento "pai" de algum outro elemento -->
 
-    
-   
+    <div id="linux">
+
+        <div class="ubuntu">
+            Ubuntu
+            <div class="elementaryos">
+                Elementary OS
+            </div>
+        </div>
+        <div class="debian">
+            Debian
+        </div>
+
+    </div>   
+
+    <script>
+        
+        console.log(
+            document.querySelector(".elementaryos").parentNode // pode ir acrescentando parentNode quantas vezes for necessário
+        );
+
+    </script>
 </body>
 </html>
