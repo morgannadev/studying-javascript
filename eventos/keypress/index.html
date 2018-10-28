@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Eventos - Keypress</title>
+</head>
+<body>
+    
+    <input type="text" id="text">
+    <div id="result" style="display: none">é o enter uhu</div>
+
+    <script>
+
+        var text = document.getElementById("text");
+        var result = document.getElementById("result");
+
+        const KEYENTER = 13;
+
+        text.addEventListener("keypress", function(evento) {
+            // console.log("disparou", this.value);
+            // console.log(evento.keyCode); ou keycode.info (pesquisar)
+            if(evento.keyCode == KEYENTER)
+                result.style.display = "block";
+        });
+
+    </script>
+
+</body>
+</html>
