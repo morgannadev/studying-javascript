@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM - querySelector</title>
+</head>
+
+<body>
+
+    <div id="testeId">teste id</div>
+    <div class="testeClass">teste class 1</div>
+    <div class="testeClass">teste class 2</div>
+    <div class="testeClass">teste class 3</div>
+    <p>teste tag</p>
+    <p class="testeClassP">teste tag com class</p>
+    <p id="testeIdP">teste tag com id</p>
+
+    <script>
+
+        // # para id, . para class, nome da tag para as tags
+        console.log(document.querySelector("#testeId"));
+        console.log(document.querySelector(".testeClass"));
+        console.log(document.querySelector("p"));
+
+        // combinando        
+        console.log(document.querySelector("p.testeClassP"));
+        console.log(document.querySelector("p#testeIdP"));
+
+        // diferenças para considerar quando usar querySelector ou os gets
+        // querySelector recupera apenas a primeira posição, mesmo que seja uma collection
+        console.log(document.querySelector(".testeClass").innerHTML);
+
+        // existe uma diferença de performance, mas é mínima dependendo do projeto
+        // se possível, considerar os gets por semântica
+
+    </script>
+</body>
+</html>
