@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Funções</title>
+</head>
+<body>
+
+    <script>
+
+        // funções podem ou não retornar alguma coisa
+        // manter uma responsabilidade para cada função
+
+        function nomeDaFuncao(soma) {
+            // o código que será executado
+            return ++soma;
+        }
+
+        // para executar a função, é necessário chamá-la
+        // nomeDaFuncao('valor');
+
+        // função com retorno
+        function calculaMedia(nota1, nota2, nota3) {
+            return (nota1 + nota2 + nota3)/3;
+        } 
+
+        var pessoa = {
+            nome: "Morganna",
+            idade: 29,
+            profissao: "Desenvolvedora",
+            cidade: "São Paulo"
+        };
+
+        // função sem retorno
+        function novaPessoa(nome, idade, profissao, cidade) {
+            pessoa.nome = nome;
+            pessoa.idade = idade;
+            pessoa.profissao = profissao;
+            pessoa.cidade = cidade;
+        };
+
+        // outra forma de fazer a função acima - passando apenas o objeto é melhor
+        function criarPessoa(novoObjetoPessoa) {
+            pessoa = novoObjetoPessoa;
+        };
+        // para executar a função acima, passar o objeto
+        // criarPessoa({nome: 'joana', idade: 20, profissao: 'estudante', cidade: 'belo horizonte' })
+
+        // podemos incluir validações para a função
+        function newPerson(newPersonCreated) {
+            if (typeof newPersonCreated == 'object') {
+                pessoa = newPersonCreated;
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        // também é possível utilizar TYPESCRIPT, uma linguagem tipada para verificar o objeto
+
+        // quando não sabemos quantos e quais parâmetros vamos receber, podemos utilizar o arguments
+        function testeParametros() {
+            console.log(arguments);
+            return arguments;
+        }
+    </script>
+
+</body>
+</html>
