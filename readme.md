@@ -5,5 +5,5 @@
 - Existem comentários para facilitar o entendimento.
 
 ## Documentação para referência:
-- [api document](https://developer.mozilla.org/pt-BR/docs/Web/API/Document);
+- [api document object model (DOM)](https://developer.mozilla.org/pt-BR/docs/Web/API/Document);
 - [javascript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript).
