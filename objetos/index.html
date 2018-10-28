@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM - objetos</title>
+</head>
+<body>
+
+
+    <script>
+
+        var carro = {
+            // indice: valor
+            placa: 'AAA-0101',
+            modelo: 'Sedan',
+            marca: 'Hyundai',
+            opcionais: {
+                cambio: 'automático',
+                combustivel: 'flex'
+            },
+            // outra coisa não funciona e outraCoisa não é indicado
+            "outra-coisa": 'outra coisa'
+        };
+
+        console.log(carro); // para acessar objeto completo
+        console.log(carro.marca); // para acessar um índice específico
+        console.log(carro["outra-coisa"]); // para acessar quando o índice estiver entre aspas
+
+    </script>
+
+</body>
+</html>
