@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Eventos - change</title>
+</head>
+<body>
+    
+    <select id="linguagens">
+        <option value="1">php</option>
+        <option value="2">javascript</option>
+        <option value="3">java</option>
+        <option value="4">c#</option>
+    </select>
+
+    <script>
+
+        var linguagens = document.getElementById("linguagens");
+        linguagens.addEventListener("change", function() {
+            // console.log(this.value); // neste caso, retorna o "value" do html (1, 2, 3 ou 4)
+            // console.log(this.options); // retorna o array de options
+            // console.log(this.selectedIndex); // qual index está selecionado
+            var options = this.options;
+            var itemAtual = this.selectedIndex;
+            console.log(options[itemAtual].text);
+            console.log(options[itemAtual].value);
+        });
+
+    </script>
+
+</body>
+</html>
