@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery - Eventos</title>
+
+    <style>
+    
+        .box {
+            position: relative;
+            left: 0;
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+
+        button {
+            font-size: 2rem;
+            background-color: #000;
+            color: #fff;
+            padding: 1rem 2rem;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="box"></div>
+    <hr>
+    <button id="next">> Next</button>
+    <button id="prev">Prev <</button>
+
+    <script src="../jquery-3.3.1.min.js"></script>
+
+    <script>
+    
+        var box = $('.box');
+        var next = $('#next');
+        var prev = $("#prev");
+    
+        // uma das formas de manipular os eventos:
+        // starting.click(function() {
+        //     console.log("alguma coisa");
+        // });
+
+        next.on("click", function() {
+            console.log("indo");
+
+            box.animate({
+                left: "800px"
+            }, 1500);
+        });
+
+         prev.on("click", function() {
+            console.log("voltando");
+
+            box.animate({
+                left: "0"
+            }, 1500);
+        });
+
+    </script>
+
+</body>
+</html>
