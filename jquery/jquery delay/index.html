@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery delay</title>
+</head>
+<body>
+
+    <button>Click</button>
+    <div class="mensagem">Olá, Brasil!</div>
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity=""
+            crossorigin="anonymous">
+    </script>
+
+    <script>
+    
+        var button = $("button");
+        var mensagem = $(".mensagem");
+
+        button.on("click", function() {
+            // mensagem.delay("slow").fadeOut(); ou fast
+            mensagem.delay(5000).fadeOut();
+        });
+    
+    </script>
+
+</body>
+</html>
