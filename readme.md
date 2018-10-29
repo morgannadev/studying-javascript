@@ -6,4 +6,5 @@
 
 ## Documentação para referência:
 - [api document object model (DOM)](https://developer.mozilla.org/pt-BR/docs/Web/API/Document);
-- [javascript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript).
+- [javascript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript);
+- [jQuery API documentation](https://api.jquery.com/).
