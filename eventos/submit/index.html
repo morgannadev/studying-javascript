@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Eventos - Submit</title>
+
+    <style>
+        .error {
+            border: 5px solid red;
+        }
+    </style>
+</head>
+<body>
+    
+    <form action="#" method="POST">
+        <input type="text" name="name" value="morganna">
+        <input type="email" name="email" value="falecom@morganna.com">
+        <button type="submit">enter</button>
+    </form>
+
+    <script>
+
+        var form = document.querySelector("form");
+        form.addEventListener("submit", function(evento) {
+            evento.preventDefault(); // evita de carregar a página novamente
+            var isValid = true;
+
+            for(let i = 0; i < this.elements.length; i++) {
+                
+                var item = this.elements[i];
+
+                if(item.type !== "submit") {
+                    if(item.value == "") {
+                        item.classList.add("error");
+                        isValid = false; // podemos utilizar e sinalizar dessa forma se, de repente, precisamos dos dados para executar alguma outra coisa
+                    } else {
+                        item.classList.remove("error");
+                    }
+                }
+            }
+
+            console.log(isValid);
+        });
+
+    </script>
+
+</body>
+</html>
