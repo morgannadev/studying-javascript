@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery - position and offset</title>
+    <!-- utilizado para verificar coordenadas de posicionamento -->
+
+    <style>
+        
+        .container {
+            width: 500px;
+            height: 500px;
+            background-color: black;
+            position: absolute;
+            top: 200px;
+            left: 300px;
+            padding: 20px 30px;
+        }
+    
+        .item {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            display: inline-block;
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <div class="container">
+        <div class="item"></div>
+    </div>
+
+    <script src="../jquery-3.3.1.min.js"></script>
+
+    <script>
+    
+        var container = $(".container");
+        var item = $(".item");
+        var position = item.position();
+        var offset = item.offset();
+
+        console.log("position.left: ", position.left, " position.top: ", position.top); // em relação ao elemento pai
+        console.log("offset.left: ", offset.left, " offset.top: ", offset.top); // em relação ao navegador
+    
+    </script>
+
+</body>
+</html>
