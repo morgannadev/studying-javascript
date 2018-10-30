@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery - Serialize e SerializeArray</title>
+
+    <style>
+    
+
+
+    </style>
+
+</head>
+<body>
+    
+    <form action="#">
+        <label for="cep">CEP</label>
+        <input type="text" name="cep" id="cep" placeholder="00000-000">
+
+        <label for="logradouro">Logradouro</label>
+        <input type="text" name="logradouro" id="logradouro" placeholder="Avenida Exemplo de Tal">
+
+        <button>Submit</button>
+    </form>
+
+    <br>
+    <br>
+    <br>
+
+    <div class="resultado"></div>
+
+    <script src="../jquery-3.3.1.min.js"></script>
+
+    <script>
+    
+        // quando for tag, apenas o nome da tag
+        // quando for classe, colocar .
+        // quando for id, colocar #
+        var form = $("form");
+        var resultado = $(".resultado");
+
+        form.on("submit", function(event) {
+            event.preventDefault();
+            
+            // var data = $(this).serialize();
+            // resultado.text(data);
+
+            var data = $(this).serializeArray();
+            resultado.text(data);
+        });
+
+    </script>
+
+</body>
+</html>
